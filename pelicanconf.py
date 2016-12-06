@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = 'Wallace Coelho'
 SITENAME = 'Wallace Coelho'
-SITEURL = ''
+SITEURL = 'https://wac2007.github.io'
 
 JINJA_EXTENSIONS = ['webassets.ext.jinja2.AssetsExtension', 'jinja2.ext.with_']
 
