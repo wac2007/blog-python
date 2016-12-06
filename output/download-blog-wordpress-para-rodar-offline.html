@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Muitas vezes nos deparamos com clientes que possuem sites rodando no Wordpress e desejam fazer alterações, porém, mexer em um site enquanto o mesmo está no ar perigoso, pois um detalhe e podemos ...">
+        <meta name="keywords" content="Desenvolvimento, PHP, Wordpress">
+        <link rel="icon" href="/favicon.ico">
+
+        <title>Download blog Wordpress para rodar Offline - Wallace Coelho</title>
+
+        <!-- Stylesheets -->
+        <link href="/theme/css/all.min.css" rel="stylesheet">
+        <!-- /Stylesheets -->
+
+        <!-- RSS Feeds -->
+        <!-- /RSS Feeds -->
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+
+
+    </head>
+
+    <body>
+
+        <!-- Header -->
+    <div class="header-container gradient">
+
+            <!-- Static navbar -->
+            <div class="container">
+                <div class="header-nav">
+                    <div class="header-logo">
+                        <a class="pull-left" href="/">
+                            <!--<img class="mr20" src="/image/logo.png" alt="logo"/>-->
+                            Wallace Coelho
+                        </a>
+                    </div>
+                    <div class="nav pull-right">
+                                <a href="/">Homepage</a>
+                                <a href="/categories.html">Categories</a>
+                    </div>
+                </div>
+            </div>
+            <!-- /Static navbar -->
+
+            <!-- Header -->
+    <!-- Header -->
+    <div class="container header-wrapper">
+        <div class="row">
+              <div class="col-lg-12">
+                  <div class="header-content">
+                      <h1 class="header-title">Download blog Wordpress para rodar Offline</h1>
+                      <p class="header-date">Por <a href="/author/wallace-coelho.html">Wallace Coelho</a>, Seg 18 janeiro 2016, na categoria <a href="/category/desenvolvimento.html">Desenvolvimento</a></p>
+                      <div class="header-underline"></div>
+                      <div class="clearfix"></div>
+                      <p class="pull-right header-tags">
+                          <span class="glyphicon glyphicon-tags mr5" aria-hidden="true"></span>
+<a href="/tag/desenvolvimento.html">Desenvolvimento</a>, <a href="/tag/php.html">PHP</a>, <a href="/tag/wordpress.html">Wordpress</a>                      </p>
+                  </div>
+              </div>
+        </div>
+    </div>
+    <!-- /Header -->
+            <!-- /Header -->
+
+        </div>
+        <!-- /Header -->
+
+
+        <!-- Content -->
+    <div class="container content">
+        <p>Muitas vezes nos deparamos com clientes que possuem sites rodando no Wordpress e desejam fazer alterações, porém, mexer em um site enquanto o mesmo está no ar perigoso, pois um detalhe e podemos colocar tudo à perder (inclusive perder o cliente).
+Portanto, vamos aprender como instalar o Wordpress já de um site existente para  fazer as alterações e enviar apenas o necessário de volta ao servidor.</p>
+<p>Neste tutorial vou assumir que você tenha:</p>
+<ul>
+<li>Servidor de php  como <em>WAMP, XAMP ou LAMP</em></li>
+<li>Tenha instalado um banco de dados MySQL (e um software para se conectar como <strong>phpMyAdmin</strong> ou <strong>MySQLWorkbench</strong>)</li>
+<li>Saiba instalar um Wordpress do zero</li>
+<li>Tenha um usuário com permissões administrativas, para logar no site que deseja baixar.</li>
+</ul>
+<p>Primeiramente, vamos entrar no site em produção e instalar o plugin <strong>UpdraftPlus Backup and Restoration</strong>.</p>
+<p><img alt="Instalar UpdraftPlus" src="/images/tutorial-download-blog/a1.PNG" /></p>
+<p>Após instalar o plugin, já ative-o e abra sua página de configuração em <strong>Settings &gt; UpdraftPlus Backups</strong> </p>
+<p><img alt="Configurações UpdraftPlus" src="/images/tutorial-download-blog/a2.PNG" /></p>
+<p>Na nova página que abrir, clique em <strong>Backup Now</strong> </p>
+<p><img alt="Backup UpdraftPlus" src="/images/tutorial-download-blog/a3.PNG" /></p>
+<p>Você verá que após clicar, haverá uma barra de progresso, aguarde até que o backup 
+termine e você verá que o campo <em>Last Log message</em> será alterado para <strong>The Backup apparently succeeded</strong>, isso mostra que o backup possivelmente está ok (Sim, ele não nos dá 100% de certeza).</p>
+<p><img alt="Progresso do Backup" src="/images/tutorial-download-blog/a4.PNG" /></p>
+<p><img alt="Fim do Backup" src="/images/tutorial-download-blog/a5.PNG" /></p>
+<p>Clique na aba <strong>Existing Backups</strong> e você verá a data e hora dos backups (um por linha).
+Na coluna Backup data, clique em todos os botões para baixar seus respectivos arquivos (Database, Plugins, Themes, Uploads e Others)</p>
+<p><img alt="Download arquivos Backup" src="/images/tutorial-download-blog/a6.PNG" /></p>
+<p>Para cada botão que você clicou, uma mensagem será criada. Clique em <strong>Download to your computer</strong> para começar a baixar os arquivos.</p>
+<p><img alt="Download arquivos Backup" src="/images/tutorial-download-blog/a7.PNG" /></p>
+<p>Ao terminar de baixar os arquivos, crie uma nova instalação do Wordpress na sua máquina (recomendo que seja da mesma versão que está em produção pra não dar problemas).</p>
+<p>Instale o plugin UpdraftPlus nesta nova instalação e vá para a página de administração do plugin.</p>
+<p>Vá para a aba <strong>Existing Backups</strong> e clique em <strong>Upload backup files</strong>, abrirá uma seção para adicionar os arquivos. Simplesmente arraste os arquivos baixados do servidor para a seção (ou use o botão select files) </p>
+<p><img alt="Importação dos arquivos de Backup" src="/images/tutorial-download-blog/b1.PNG" /></p>
+<p>Você verá que foi criado um novo registro de backup, clique no botão restore.</p>
+<p><img alt="Backup já importado" src="/images/tutorial-download-blog/b2.PNG" /></p>
+<p>Na janelinha que abrir, marque todas as opções e clique em restore.</p>
+<p><img alt="Backup já importado" src="/images/tutorial-download-blog/b3.PNG" /></p>
+<p>Pode ser que você recebe um Warning, dizendo que o backup é de um site diferente, neste caso, apenas ignore e clique em Restore novamente.</p>
+<p><img alt="Backup já importado" src="/images/tutorial-download-blog/b4.PNG" /></p>
+<p>Aguarde a restauração. Se ao término, tudo ocorrer bem, você verá a mensagem <strong>Restore Successful!</strong> (Calma, já está acabando!)</p>
+<p><img alt="Backup já importado" src="/images/tutorial-download-blog/b5.PNG" /></p>
+<p>Acesse o banco de dados da sua máquina (Importante! É o da máquina, não o de produção!) e entre no schema associado ao Wordpress. Na tabela options, altere os registros da imagem (siteurl e home) com a url local.</p>
+<p><strong>Antes</strong></p>
+<p><img alt="Banco antes" src="/images/tutorial-download-blog/b6.PNG" /></p>
+<p><strong>Depois</strong></p>
+<p><img alt="Banco depois" src="/images/tutorial-download-blog/b7.PNG" /></p>
+<p>Depois disso, entre na url local e teste. Se tudo ocorreu bem, você já está podendo ver o mesmo rodando. Agora é só fazer as alterações, testá-las localmente, e enviar apenas as alterações (FTP por exemplo).</p>
+<p><strong>Nota:</strong> Caso seu site possua links permanentes (permalinks) é importante gerá-los novamente, para não ter erros. Basta ir em Settings &gt; Permalinks (Configurações &gt; Links Permanentes) e clicar em save novamente. </p>
+
+
+        
+    </div>
+        <!-- /Content --> 
+
+        <!-- Footer -->
+        <div class="footer gradient-2">
+            <div class="container footer-container ">
+                <div class="row">
+                    <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+                        <div class="footer-title">Sitemap</div>
+                        <ul class="list-unstyled">
+                            <li><a href="/archives.html">Archives</a></li>
+                            <li><a href="/tags.html">Tags</a></li>
+                            <li><a href="/authors.html">Authors</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+                        <div class="footer-title">Social</div>
+                        <ul class="list-unstyled">
+                            <li><a href="#" target="_blank">You can add links in your config file</a></li>
+                            <li><a href="#" target="_blank">Another social link</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+                        <div class="footer-title">Links</div>
+                        <ul class="list-unstyled">
+                            <li><a href="http://getpelican.com/" target="_blank">Pelican</a></li>
+                            <li><a href="http://python.org/" target="_blank">Python.org</a></li>
+                            <li><a href="http://jinja.pocoo.org/" target="_blank">Jinja2</a></li>
+                            <li><a href="#" target="_blank">You can modify those links in your config file</a></li>
+                        </ul>
+                    </div> 
+                    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                        <p class="pull-right text-right">
+                            <small><em>Proudly powered by <a href="http://docs.getpelican.com/" target="_blank">pelican</a></em></small><br/>
+                            <small><em>Theme and code by <a href="https://github.com/molivier" target="_blank">molivier</a></em></small><br/>
+                            <small>&copy; blogname 2015</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /Footer -->
+    </body>
+</html>
