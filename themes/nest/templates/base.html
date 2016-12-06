@@ -17,8 +17,10 @@
         {% else %}
         <link href="{{ SITEURL }}/theme/css/bootstrap.min.css" rel="stylesheet">
         <link href="{{ SITEURL }}/theme/css/fonts.css" rel="stylesheet">
+        <link href="{{ SITEURL }}/theme/css/font-awesome.min.css" rel="stylesheet">
         <link href="{{ SITEURL }}/theme/css/nest.css" rel="stylesheet">
         <link href="{{ SITEURL }}/theme/css/pygment.css" rel="stylesheet">
+        <link href="{{ SITEURL }}/theme/css/style.css" rel="stylesheet">
         {% endif %}
         <!-- /Stylesheets -->
 
@@ -163,14 +165,12 @@
                             {% endif %}
                         </ul>
                     </div>
-                    <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+                    <div class="social col-xs-4 col-sm-3 col-md-3 col-lg-3">
                         {% if SOCIAL %}
                         <div class="footer-title">{{ NEST_SOCIAL_COLUMN_TITLE }}</div>
-                        <ul class="list-unstyled">
-                            {% for name, link in SOCIAL %}
-                            <li><a href="{{ link }}" target="_blank">{{name}}</a></li>
+                            {% for name, link, icon in SOCIAL %}
+                            <a href="{{ link }}" target="_blank"><i class="fa fa-fw {{icon}}"></i></a>
                             {% endfor %}
-                        </ul>
                         {% endif %}
                     </div>
                     <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">

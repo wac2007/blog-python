@@ -6,8 +6,6 @@ AUTHOR = 'Wallace Coelho'
 SITENAME = 'Wallace Coelho'
 SITEURL = ''
 
-JINJA_EXTENSIONS = ['webassets.ext.jinja2.AssetsExtension', 'jinja2.ext.with_']
-
 PATH = 'content'
 
 TIMEZONE = 'America/Sao_Paulo'
@@ -28,8 +26,8 @@ LINKS = (('Pelican', 'http://getpelican.com/'),
          ('You can modify those links in your config file', '#'),)
 
 # Social widget
-SOCIAL = (('You can add links in your config file', '#'),
-          ('Another social link', '#'),)
+SOCIAL = (('Facebook', 'https://www.facebook.com/wac2007', 'fa-facebook'),
+          ('Twitter', 'https://twitter.com/wac2007', 'fa-twitter'),)
 
 DEFAULT_PAGINATION = 10
 
@@ -42,7 +40,7 @@ DEFAULT_PAGINATION = 10
 THEME = 'themes/nest'
 SITESUBTITLE = u'Magia e Tecnologia'
 # Minified CSS
-NEST_CSS_MINIFY = True
+NEST_CSS_MINIFY = False
 # Add items to top menu before pages
 MENUITEMS = [('Homepage', '/'),('Categories','/categories.html')]
 # Add header background image from content/images : 'background.jpg'
