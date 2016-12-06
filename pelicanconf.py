@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = 'Wallace Coelho'
 SITENAME = 'Wallace Coelho'
-SITEURL = 'https://wac2007.github.io'
+SITEURL = ''
 
 JINJA_EXTENSIONS = ['webassets.ext.jinja2.AssetsExtension', 'jinja2.ext.with_']
 
@@ -55,7 +55,7 @@ NEST_SITEMAP_ATOM_LINK = u'Atom Feed'
 NEST_SITEMAP_RSS_LINK = u'RSS Feed'
 NEST_SOCIAL_COLUMN_TITLE = u'Social'
 NEST_LINKS_COLUMN_TITLE = u'Links'
-NEST_COPYRIGHT = u'&copy; blogname 2015'
+NEST_COPYRIGHT = u'&copy; Wallace Coelho 2016'
 # Footer optional
 NEST_FOOTER_HTML = ''
 # index.html
